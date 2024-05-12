@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('wallets', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->OnDelete('cascade');
-            $table->integer('balance');
+            $table->unsignedBigInteger('balance');  //unsignedBigInteger supaya tidak bisa minus
             $table->softDeletes(); // hapus tapi tidak permanen
             $table->timestamps();
         });

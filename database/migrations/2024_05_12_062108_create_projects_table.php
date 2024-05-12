@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('about'); // karena akan panjang (text)
             $table->foreignId('category_id')->constrained()->onDelete('cascade'); // cascade : induk dihapus anak terhapus
             $table->unsignedBigInteger('client_id'); //buatkan reference karena beda dengan nama tabel aslinya yaitu user
-            $table->integer('budget');
+            $table->unsignedBigInteger('budget'); //unsignedBigInteger supaya tidak bisa minus
             $table->string('skill_level');
             $table->boolean('has_finished');
             $table->boolean('has_started');

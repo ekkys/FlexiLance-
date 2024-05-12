@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('wallet_transactions', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->constrained()->onDelete('cascade');
-            $table->integer('amount');
+            $table->unsignedBigInteger('amount');  //unsignedBigInteger supaya tidak bisa minus
             $table->string('type');
             $table->boolean('is_paid');
             $table->string('proof');
