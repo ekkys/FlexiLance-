@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('project_id')->constrained()->onDelete('cascade');
             $table->unsignedBigInteger('freelancer_id');  //buatkan reference karena beda dengan nama tabel aslinya yaitu user
             $table->text('message');
-            $table->string('varchar');
+            $table->string('status');
             $table->softDeletes(); // hapus tapi tidak permanen
             $table->timestamps();
 

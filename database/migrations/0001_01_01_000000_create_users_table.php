@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('avatar');
-            $table->string('accupation');
-            $table->unsignedBigInteger('connects'); // tidak boleh negatif (0 1 2 3 ...)
+            $table->string('avatar')->nullable();
+            $table->string('occupation')->nullable();
+            $table->unsignedBigInteger('connects')->nullable(); // tidak boleh negatif (0 1 2 3 ...)
             $table->rememberToken();
             $table->timestamps();
         });
