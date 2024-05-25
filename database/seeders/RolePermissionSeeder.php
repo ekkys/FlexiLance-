@@ -51,7 +51,7 @@ class RolePermissionSeeder extends Seeder
             'topup wallet',
             'withdraw wallet',
         ];
-        $clientRole->syncPermission($clientPermissions);
+        $clientRole->syncPermissions($clientPermissions);
 
         //Frelancer
         $freelancerRole = Role::firstOrCreate([
@@ -61,7 +61,7 @@ class RolePermissionSeeder extends Seeder
             'apply job',
             'withdraw wallet',
         ];
-        $freelancerRole->syncPermission($freelancerPermission);
+        $freelancerRole->syncPermissions($freelancerPermission);
 
         //SuperAdmin
         $superAdminRole = Role::firstOrCreate([
@@ -78,7 +78,7 @@ class RolePermissionSeeder extends Seeder
             'topup wallet',
             'withdraw wallet',
         ];
-        $superAdminRole->syncPermission($superAdminPermission);
+        $superAdminRole->syncPermissions($superAdminPermission);
 
         $user = User::create([
             'name' => 'Super Admin',

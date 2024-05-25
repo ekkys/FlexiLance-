@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('avatar')->nullable();
             $table->string('occupation')->nullable();
-            $table->unsignedBigInteger('connects')->nullable(); // tidak boleh negatif (0 1 2 3 ...)
+            $table->unsignedBigInteger('connect')->nullable(); // tidak boleh negatif (0 1 2 3 ...)
             $table->rememberToken();
             $table->timestamps();
         });
